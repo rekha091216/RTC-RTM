@@ -2,3 +2,9 @@ Real Time Communications and Messaging
 APP ID : f6ea60b1f57a4cc2a0c542e0d9f1e6ad
 TOKEN: 006f6ea60b1f57a4cc2a0c542e0d9f1e6adIACtavtrQ69oeEAf1AucC2TWry8i1KynFfKOk2gqwe9q85hzx2EAAAAAEAC7nPWL91X5YQEAAQD3Vflh
 channel:channelagora
+
+
+Steps to run the application :
+
+1) npm install
+2) npm run start:dev
