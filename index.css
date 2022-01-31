@@ -1,0 +1,102 @@
+.banner {
+    padding: 10px;
+    background-color:darkslateblue;
+    text-align: center;
+    color: white;
+}
+
+.title-text{
+    padding: 8px 20px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+    font-size: x-large;
+}
+
+.form-control {
+ font-family:'Times New Roman', Times, serif
+}
+
+#join-form {
+    margin-top: 10px;
+}
+
+.join-info-text {
+    margin-bottom: 2px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 2px;
+}
+
+.player {
+    width: 480px;
+    height: 320px;
+}
+
+.player-name {
+    margin: 8px 0;
+}
+
+.message{
+
+    background-color: cornflowerblue;
+}
+
+@media (max-width: 640px) {
+    .player {
+        width: 320px;
+        height: 240px;
+    }
+}
+
+#join,
+#leave,
+#mic-btn,
+#video-btn{
+    background-color: darkslateblue;
+    color: white;
+    border-radius: 5px;
+}
+.sendMessage {
+    background-color: darkslateblue;
+    color: white;
+    border-radius: 5px;   
+}
+
+#join:hover,
+#leave:hover,
+#mic-btn:hover,
+#video-btn:hover {
+    background-color: rgba(2, 133, 221, 0.911);
+}
+
+.all-users-text {
+    background: darkslateblue;
+    padding: 30px;
+    color: white;
+    border-radius: 15px;
+    max-height: 500px;
+    overflow: scroll;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.btn-control {
+    outline: none;
+    border: 1px solid white;
+    box-shadow: none;
+}
+
+.btn-control:hover,
+.btn-control:focus {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid white;
+    background: rgb(12, 157, 253);
+}
+
+.remoteMicrophone,
+.remoteCamera {
+    cursor: pointer;
+}
