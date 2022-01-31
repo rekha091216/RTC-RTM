@@ -22,17 +22,17 @@ async function RTMJoin(uid) {
                 console.log("------------------------------");
                 console.log("All members in the channel are as follows: ");
                 console.log(memberNames);
-                var newHTML = $.map(memberNames, function (singleMember) {
-                    if (singleMember != accountName) {
-                        const element = document.getElementById("sendMessage");
-                        element.id = `sendMessage remoteVideo-${singleMember}`;
-                        return (`<li class="mt-2">
-                  <div class="row">
-                      <p>${singleMember}</p>
-                   </div>
-                 </li>`);
-                    }
-                });
+                // var newHTML = $.map(memberNames, function (singleMember) {
+                //     if (singleMember != accountName) {
+                //         const element = document.getElementById("sendMessage");
+                //         element.id = `sendMessage remoteVideo-${singleMember}`;
+                //         return (`<li class="mt-2">
+                //   <div class="row">
+                //       <p>${singleMember}</p>
+                //    </div>
+                //  </li>`);
+                //     }
+                // });
                 document.getElementById('totalMember').innerHTML = `No of Participants : ${memberNames.length}`;;
             });
 
@@ -81,13 +81,14 @@ async function RTMJoin(uid) {
                 channel.getMembers().then((memberNames) => {
                     console.log("New member joined so updated list is: ");
                     console.log(memberNames);
+                    const totalMembers = memberNames.length;
                     document.getElementById('totalMembers').innerHTML = `"No of Participants : "${totalMembers}`;
                     var newHTML = $.map(memberNames, function (singleMember) {
+                        channel.sendMessageToPeer( {
+                            text : totalMembers }
+                            , member);
                         if (singleMember != accountName) {
                             member = singleMember;
-                            channel.sendMessageToPeer( {
-                                text : memberNames.length }
-                                , member);
                             return (`<li class="mt-2">
                       <div class="row">
                           <p>${singleMember}</p>
@@ -132,6 +133,8 @@ async function RTMJoin(uid) {
     // Logout
     document.getElementById("leave").onclick = async function () {
         console.log("Client logged out of RTM.");
+        document.getElementById('totalMember').innerHTML = "";
+
         await clientRTM.logout();
     }
 }
