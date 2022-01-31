@@ -25,12 +25,16 @@
         <form id="join-form">
             <div class="row join-info-group">
                 <div class="col-sm">
-                    <p class="join-info-text">AppID</p>
+                    <p class="join-info-text">AppID </p>
                     <input id="appid" type="text" placeholder="Enter AppID" required class="form-control">
                 </div>
                 <div class="col-sm">
-                    <p class="join-info-text">Token</p>
-                    <input id="token" type="text" placeholder="Enter Token" required class="form-control">
+                    <p class="join-info-text">Token - RTC</p>
+                    <input id="token" type="text" placeholder="Enter AppID" required class="form-control">
+                </div>
+                <div class="col-sm">
+                    <p class="join-info-text">APPID - RTM</p>
+                    <input id="appidRTM" type="text" placeholder="Enter Token" required class="form-control">
                 </div>
                 <div class="col-sm">
                     <p class="join-info-text">Channel</p>
@@ -70,9 +74,6 @@
             </div>
             <div class="col">
                 <!-- All Users List with Mute Controls -->
-                <div class="col">
-                    <label id="totalMember" style="text-align: center;"></label>
-                </div>
                 <div class="all-users-text my-3">
                     <h5 class="text-decoration-underline">Chat Box</h5>
                     <div class="all-users" id="all-users">

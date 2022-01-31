@@ -1,6 +1,7 @@
 async function RTMJoin(uid) {
     // Create Agora RTM client
-    const appid = "d11aa12099fb42bd8f1102de2aef8124";
+    const appid = $("#appidRTM").val();
+    
     const clientRTM = AgoraRTM.createInstance(appid, {
         enableLogUpload: false
     });
@@ -33,7 +34,6 @@ async function RTMJoin(uid) {
                 //  </li>`);
                 //     }
                 // });
-                document.getElementById('totalMember').innerHTML = `No of Participants : ${memberNames.length}`;;
             });
 
             $(document).on('click', '.sendMessage', function () {
@@ -65,14 +65,22 @@ async function RTMJoin(uid) {
             clientRTM.on('MessageFromPeer', function ({
                 text
             }, peerId) {
-                console.log(peerId + " muted/unmuted your " + text);
-                var htmlText = `<li class="mt-2">
+
+                if (text.includes("count")) {
+
+                }
+                else {
+
+                    console.log(peerId + " muted/unmuted your " + text);
+                    var htmlText = `<li class="mt-2">
                 <div class="row">
                     <p>${peerId}</p>
                     <p>${text}</p>
                  </div></li>
                `;
-                document.getElementById('insert-all-users').innerHTML += htmlText;
+                    document.getElementById('insert-all-users').innerHTML += htmlText;
+                }
+
             })
 
             // Display channel member joined updated users
@@ -81,12 +89,8 @@ async function RTMJoin(uid) {
                 channel.getMembers().then((memberNames) => {
                     console.log("New member joined so updated list is: ");
                     console.log(memberNames);
-                    const totalMembers = memberNames.length;
-                    document.getElementById('totalMembers').innerHTML = `"No of Participants : "${totalMembers}`;
                     var newHTML = $.map(memberNames, function (singleMember) {
-                        channel.sendMessageToPeer( {
-                            text : totalMembers }
-                            , member);
+                       
                         if (singleMember != accountName) {
                             member = singleMember;
                             return (`<li class="mt-2">
