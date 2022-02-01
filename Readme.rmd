@@ -1,4 +1,4 @@
-AGORA :: Project showcasing how Real time Communications and Messaging can be Implemented AGORA SDKS.
+AGORA :: Project showcasing how Real time Communications and Messaging can be Implemented  using AGORA SDKS.
 
 Steps to run the application :
 
