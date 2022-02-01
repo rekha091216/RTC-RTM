@@ -1,8 +1,4 @@
-Real Time Communications and Messaging
-APP ID : f6ea60b1f57a4cc2a0c542e0d9f1e6ad
-TOKEN-RTC:006f6ea60b1f57a4cc2a0c542e0d9f1e6adIACtavtrQ69oeEAf1AucC2TWry8i1KynFfKOk2gqwe9q85hzx2EAAAAAEAC7nPWL91X5YQEAAQD3Vflh
-APPID-RTM:d11aa12099fb42bd8f1102de2aef8124
-channel:channelagora
+<b>Real Time Communications and Messaging</b>
 
 
 Steps to run the application :
