@@ -4,3 +4,5 @@ Steps to run the application :
 
 1) npm install
 2) npm run start:dev
+3) Please generate APPID, Token and RTM app id and token
+4) THe Chat will work only after joining the channel
