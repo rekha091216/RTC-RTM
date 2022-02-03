@@ -23,17 +23,6 @@ async function RTMJoin(uid) {
                 console.log("------------------------------");
                 console.log("All members in the channel are as follows: ");
                 console.log(memberNames);
-                // var newHTML = $.map(memberNames, function (singleMember) {
-                //     if (singleMember != accountName) {
-                //         const element = document.getElementById("sendMessage");
-                //         element.id = `sendMessage remoteVideo-${singleMember}`;
-                //         return (`<li class="mt-2">
-                //   <div class="row">
-                //       <p>${singleMember}</p>
-                //    </div>
-                //  </li>`);
-                //     }
-                // });
             });
 
             $(document).on('click', '.sendMessage', function () {
@@ -58,7 +47,7 @@ async function RTMJoin(uid) {
                             );
                         }
                     });
-                    document.getElementById('insert-all-users').innerHTML += newHTML;
+                    // document.getElementById('insert-all-users').innerHTML += newHTML;
                 })
             });
 
@@ -100,7 +89,7 @@ async function RTMJoin(uid) {
                      </li>`);
                         }
                     });
-                    document.getElementById("sendMessage").innerHTML += newHTML;
+                    // document.getElementById("sendMessage").innerHTML += newHTML;
                 });
             })
             // Display channel member left updated users
@@ -137,8 +126,8 @@ async function RTMJoin(uid) {
     // Logout
     document.getElementById("leave").onclick = async function () {
         console.log("Client logged out of RTM.");
-        document.getElementById('totalMember').innerHTML = "";
-
+        // document.getElementById('totalMember').innerHTML = "";
+        document.getElementById('insert-all-users').remove();
         await clientRTM.logout();
     }
 }
